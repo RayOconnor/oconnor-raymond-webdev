@@ -10,10 +10,7 @@ h1.nav-header {
   display: inline-block;
 }
 
-span.nav-right-icon {
-  float: right;
-}
-
-span.nav-right-icon {
+a.nav-right-icon {
   margin-top: 30px;
+  float: right;
 }
