@@ -6,11 +6,24 @@ body {
   padding-top: 70px;
 }
 
-h1.nav-header {
+h3.nav-header {
   display: inline-block;
 }
 
-a.nav-right-icon {
-  margin-top: 30px;
+a.nav-icon {
+  margin-top: 25px;
+  float: right;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a.list-icon {
+  float: right;
+}
+
+a.footer-nav-right-icon {
+  margin-top: 20px;
   float: right;
 }
