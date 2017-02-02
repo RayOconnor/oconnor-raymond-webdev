@@ -13,35 +13,37 @@
   <link href="/assignment/css/style.css" rel="stylesheet"/>
 </head>
 <body>
-<div class="container">
+<div class="container-fluid">
   <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="hidden-xs col-sm-4">
-      <a class="glyphicon glyphicon-menu-left nav-back-icon" aria-hidden="true" href="../user/profile.html"></a>
+    <div class="col-xs-1">
+      <a class="glyphicon glyphicon-menu-left nav-back-icon" aria-hidden="true" href="website-list.html"></a>
+    </div>
+    <div class="hidden-xs col-sm-3">
       <h3 class="nav-header">Websites</h3>
       <a class="glyphicon glyphicon-plus nav-icon" aria-hidden="true" href="website-new.html"></a>
     </div>
-    <div class="col-xs-12 col-sm-8">
+    <div class="col-xs-11 col-sm-8">
       <h3 class="nav-header">New Website</h3>
-      <a class="glyphicon glyphicon-ok nav-icon" aria-hidden="true" href="profile.html"></a>
+      <a class="glyphicon glyphicon-ok nav-icon" aria-hidden="true" href="../user/profile.html"></a>
     </div>
   </nav>
   <div class="row">
     <div class="hidden-xs col-sm-4">
       <ul>
         <li>
-          <a class="" href="">Address Book App</a>
+          <a href="../page/page-list.html">Address Book App</a>
           <a class="glyphicon glyphicon-cog list-icon" aria-hidden="true" href="website-edit.html"></a>
         </li>
         <li>
-          <a href="">Blogger</a>
+          <a href="../page/page-list.html">Blogger</a>
           <a class="glyphicon glyphicon-cog list-icon" aria-hidden="true" href="website-edit.html"></a>
         </li>
         <li>
-          <a href="">Blogging App</a>
+          <a href="../page/page-list.html">Blogging App</a>
           <a class="glyphicon glyphicon-cog list-icon" aria-hidden="true" href="website-edit.html"></a>
         </li>
         <li>
-          <a href="">Script Testing App</a>
+          <a href="../page/page-list.html">Script Testing App</a>
           <a class="glyphicon glyphicon-cog list-icon" aria-hidden="true" href="website-edit.html"></a>
         </li>
       </ul>
@@ -50,11 +52,11 @@
       <form>
         <div class="form-group">
           <label>Name</label>
-          <input class="form-control" placeholder="Name">
+          <input class="form-control" type="text" placeholder="Name">
         </div>
         <div class="form-group">
           <label>Description</label>
-          <textarea class="form-control" placeholder="Description"></textarea>
+          <textarea class="form-control" placeholder="Description"  rows="3"></textarea>
         </div>
       </form>
     </div>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Website Register Page</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"/>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+          integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+          crossorigin="anonymous"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="/assignment/css/style.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="container-fluid">
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="col-xs-1">
+      <a class="glyphicon glyphicon-menu-left nav-back-icon" aria-hidden="true" href="website-list.html"></a>
+    </div>
+      <div class="hidden-xs col-sm-3">
+      <h3 class="nav-header">Websites</h3>
+      <a class="glyphicon glyphicon-plus nav-icon" aria-hidden="true" href="website-new.html"></a>
+    </div>
+    <div class="col-xs-11 col-sm-8">
+      <h3 class="nav-header">Edit Website</h3>
+      <a class="glyphicon glyphicon-ok nav-icon" aria-hidden="true" href="website-list.html"></a>
+    </div>
+  </nav>
+  <div class="row">
+    <div class="hidden-xs col-sm-4">
+      <ul>
+        <li>
+          <a class="" href="">Address Book App</a>
+          <a class="glyphicon glyphicon-cog list-icon" aria-hidden="true" href="website-edit.html"></a>
+        </li>
+        <li>
+          <a href="">Blogger</a>
+          <a class="glyphicon glyphicon-cog list-icon" aria-hidden="true" href="website-edit.html"></a>
+        </li>
+        <li>
+          <a href="">Blogging App</a>
+          <a class="glyphicon glyphicon-cog list-icon" aria-hidden="true" href="website-edit.html"></a>
+        </li>
+        <li>
+          <a href="">Script Testing App</a>
+          <a class="glyphicon glyphicon-cog list-icon" aria-hidden="true" href="website-edit.html"></a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-xs-12 col-sm-8">
+      <form>
+        <div class="form-group">
+          <label>Website Name</label>
+          <input class="form-control" type="text" placeholder="Name" value="Kite Surfin is Rad Bruh">
+        </div>
+        <div class="form-group">
+          <label>Website Description</label>
+          <textarea class="form-control" type="text" placeholder="Description"  rows="3">Kite Surfing is a new craze sweeping the nation. This site exists to provide kite surfing enthusiasts with a place to share details about surf conditions and resell equipment.</textarea>
+        </div>
+      </form>
+      <a class="btn btn-default btn-danger btn-block" href="website-list.html" role="button">Delete</a>
+    </div>
+  </div>
+</div>
+<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container">
+    <a class="glyphicon glyphicon-user footer-nav-right-icon" aria-hidden="true" href="../user/profile.html"></a>
+  </div>
+</nav>
+</body>
+</html>
