@@ -34,6 +34,10 @@ ul {
   list-style-type: none;
 }
 
+img {
+  width: 100%
+}
+
 a.list-icon {
   float: right;
 }
