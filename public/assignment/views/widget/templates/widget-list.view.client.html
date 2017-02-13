@@ -1,18 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <title>Website List Page</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"/>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link href="/assignment/css/style.css" rel="stylesheet"/>
-</head>
-<body>
+
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
-    <a class="glyphicon glyphicon-menu-left nav-back-icon" aria-hidden="true" href="../website/website-list.html"></a>
+    <a class="glyphicon glyphicon-menu-left nav-back-icon" aria-hidden="true" href="#/user/:uid/website/:wid/page/:pid/widget"></a>
     <h3 class="nav-header">Widgets</h3>
     <a class="glyphicon glyphicon-plus nav-icon" aria-hidden="true" href="page-new.html"></a>
   </div>
@@ -20,7 +9,7 @@
 <div class="container-fluid">
   <div class=heading-widget>
     <div class="config-toolbar">
-      <a href="widget-heading.html">
+      <a href="#/user/:uid/website/:wid/page/:pid/widget/:wgid">
         <span class="glyphicon glyphicon-cog"></span>
       </a>
       <span class="glyphicon glyphicon-align-justify"></span>
@@ -29,7 +18,7 @@
   </div>
   <div class=heading-widget>
     <div class="config-toolbar">
-      <a href="widget-heading.html">
+      <a href="#/user/:uid/website/:wid/page/:pid/widget/:wgid">
         <span class="glyphicon glyphicon-cog"></span>
       </a>
       <span class="glyphicon glyphicon-align-justify"></span>
@@ -39,7 +28,7 @@
 
   <div class=image-widget>
     <div class="config-toolbar">
-      <a href="widget-image.html">
+      <a href="#/user/:uid/website/:wid/page/:pid/widget/:wgid">
         <span class="glyphicon glyphicon-cog"></span>
       </a>
       <span class="glyphicon glyphicon-align-justify"></span>
@@ -48,7 +37,7 @@
   </div>
   <div class=html-widget>
     <div class="config-toolbar">
-      <a href="widget-image.html">
+      <a href="#/user/:uid/website/:wid/page/:pid/widget/:wgid">
         <span class="glyphicon glyphicon-cog"></span>
       </a>
       <span class="glyphicon glyphicon-align-justify"></span>
@@ -58,7 +47,7 @@
 
   <div class=heading-widget>
     <div class="config-toolbar">
-      <a href="widget-heading.html">
+      <a href="#/user/:uid/website/:wid/page/:pid/widget/:wgid">
         <span class="glyphicon glyphicon-cog"></span>
       </a>
       <span class="glyphicon glyphicon-align-justify"></span>
@@ -68,7 +57,7 @@
 
   <div class=youtube-widget>
     <div class="config-toolbar">
-      <a href="widget-image.html">
+      <a href="#/user/:uid/website/:wid/page/:pid/widget/:wgid">
         <span class="glyphicon glyphicon-cog"></span>
       </a>
       <span class="glyphicon glyphicon-align-justify"></span>
@@ -79,7 +68,7 @@
   </div>
   <div class=html-widget>
     <div class="config-toolbar">
-      <a href="widget-image.html">
+      <a href="#/user/:uid/website/:wid/page/:pid/widget/:wgid">
         <span class="glyphicon glyphicon-cog"></span>
       </a>
       <span class="glyphicon glyphicon-align-justify"></span>
@@ -91,8 +80,6 @@
   </div>
 <nav class="navbar navbar-default navbar-fixed-bottom">
   <div class="container">
-    <a class="glyphicon glyphicon-user footer-nav-right-icon" aria-hidden="true" href="../user/profile.html"></a>
+    <a class="glyphicon glyphicon-user footer-nav-right-icon" aria-hidden="true" href="#/user/:uid"></a>
   </div>
 </nav>
-</body>
-</html>
