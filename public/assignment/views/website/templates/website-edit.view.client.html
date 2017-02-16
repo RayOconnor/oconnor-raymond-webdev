@@ -1,0 +1,52 @@
+
+<div class="container-fluid">
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="col-xs-1">
+      <a class="glyphicon glyphicon-menu-left nav-back-icon" aria-hidden="true" href="#/user/{{model.userId}}/website"></a>
+    </div>
+      <div class="hidden-xs col-sm-3">
+      <h3 class="nav-header">Websites</h3>
+      <a class="glyphicon glyphicon-plus nav-icon" aria-hidden="true" href="#/user/{{model.userId}}/website/new"></a>
+    </div>
+    <div class="col-xs-11 col-sm-8">
+      <h3 class="nav-header">Edit Website</h3>
+      <a ng-click="model.updateWebsite()" class="glyphicon glyphicon-ok nav-icon" aria-hidden="true"></a>
+    </div>
+  </nav>
+  <div class="row">
+    <div class="hidden-xs col-sm-4">
+      <div class="container-fluid user-form">
+        <ul>
+          <li ng-repeat="website in model.websites">
+            <a href="#/user/{{model.userId}}/website/{{website._id}}/page">{{website.name}}</a>
+            <a class="glyphicon glyphicon-cog list-icon" aria-hidden="true" href="#/user/{{model.userId}}/website/{{website._id}}"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-8">
+      <form>
+        <div class="form-group">
+          <label>Website Name</label>
+          <input ng-model="model.website.name"
+                 class="form-control"
+                 type="text"
+                 placeholder="Name">
+
+          <label>Website Description</label>
+          <textarea ng-model="model.website.description"
+                    class="form-control"
+                    type="text"
+                    placeholder="Description"
+                    rows="3"></textarea>
+        </div>
+      </form>
+      <a ng-click="model.deleteWebsite()" class="btn btn-default btn-danger btn-block" role="button">Delete</a>
+    </div>
+  </div>
+</div>
+<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container">
+    <a class="glyphicon glyphicon-user footer-nav-right-icon" aria-hidden="true" href="#/user/{{model.userId}}"></a>
+  </div>
+</nav>

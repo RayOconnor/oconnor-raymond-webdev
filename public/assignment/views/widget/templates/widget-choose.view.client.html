@@ -1,0 +1,46 @@
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <a class="glyphicon glyphicon-menu-left nav-back-icon" aria-hidden="true" href="#/user/{{model.userId}}/website/{{model.websiteId}}/page/{{model.pageId}}/widget"></a>
+    <h3 class="nav-header">Choose Widget</h3>
+  </div>
+</nav>
+<div class="container user-form">
+  <ul>
+    <li>
+      <a ng-click="model.createAndEdit('HEADING')">Header</a>
+    </li>
+    <li>
+      <a href="#/user/{{model.userId}}/website/{{model.websiteId}}/page/{{model.pageId}}/widget">Label</a>
+    </li>
+    <li>
+      <a href="#/user/{{model.userId}}/website/{{model.websiteId}}/page/{{model.pageId}}/widget">HTML</a>
+    </li>
+    <li>
+      <a href="#/user/{{model.userId}}/website/{{model.websiteId}}/page/{{model.pageId}}/widget">Text Input</a>
+    </li>
+    <li>
+      <a href="#/user/{{model.userId}}/website/{{model.websiteId}}/page/{{model.pageId}}/widget">Link</a>
+    </li>
+    <li>
+      <a href="#/user/{{model.userId}}/website/{{model.websiteId}}/page/{{model.pageId}}/widget">Button</a>
+    </li>
+    <li>
+      <a ng-click="model.createAndEdit('IMAGE')">Image</a>
+    </li>
+    <li>
+      <a ng-click="model.createAndEdit('YOUTUBE')">YouTube</a>
+    </li>
+    <li>
+      <a href="#/user/{{model.userId}}/website/{{model.websiteId}}/page/{{model.pageId}}/widget">Data Table</a>
+    </li>
+    <li>
+      <a href="#/user/{{model.userId}}/website/{{model.websiteId}}/page/{{model.pageId}}/widget">Repeater</a>
+    </li>
+  </ul>
+</div>
+<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container">
+    <a class="glyphicon glyphicon-user footer-nav-right-icon" aria-hidden="true" href="#/user/{{model.userId}}"></a>
+  </div>
+</nav>

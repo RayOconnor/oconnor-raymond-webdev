@@ -1,0 +1,20 @@
+
+<div class="container-fluid user-form">
+  <h1>Register</h1>
+  <form>
+    <input ng-model="model.user.username"
+           class="form-control"
+           type="text"
+           placeholder="Username"/>
+    <input class="form-control"
+           type="password"
+           placeholder="Password"
+           ng-model="model.user.password"/>
+    <input class="form-control"
+           type="password"
+           placeholder="Confirm Password"
+           ng-model="password2"/>
+  </form>
+  <a ng-click="model.createUser(model.user)" class="btn btn-default btn-primary btn-block" role="button">Register</a>
+  <a class="btn btn-default btn-danger btn-block" href="#/login" role="button">Cancel</a>
+</div>
