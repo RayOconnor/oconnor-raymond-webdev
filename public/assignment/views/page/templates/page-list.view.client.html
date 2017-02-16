@@ -1,33 +1,21 @@
 
 <nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <a class="glyphicon glyphicon-menu-left nav-back-icon" aria-hidden="true" href="#/user/:uid/website"></a>
+  <div class="container-fluid">
+    <a class="glyphicon glyphicon-menu-left nav-back-icon" aria-hidden="true" href="#/user/{{model.userId}}/website"></a>
     <h3 class="nav-header">Pages</h3>
-    <a class="glyphicon glyphicon-plus nav-icon" aria-hidden="true" href="#/user/:uid/website/:wid/page/new"></a>
+    <a class="glyphicon glyphicon-plus nav-icon" aria-hidden="true" href="#/user/{{model.userId}}/website/{{model.websiteId}}/page/new"></a>
   </div>
 </nav>
-<div class="container user-form">
+<div class="container-fluid user-form">
   <ul>
-    <li>
-      <a href="#/user/:uid/website/:wid/page/:pid/widget">Kite Surf Paluza</a>
-      <a class="glyphicon glyphicon-cog list-icon" aria-hidden="true" href="#/user/:uid/website/:wid/page/:pid"></a>
-    </li>
-    <li>
-      <a href="#/user/:uid/website/:wid/page/:pid/widget">Real Kite Surfers Wear Pink Monthly</a>
-      <a class="glyphicon glyphicon-cog list-icon" aria-hidden="true" href="#/user/:uid/website/:wid/page/:pid"></a>
-    </li>
-    <li>
-      <a href="#/user/:uid/website/:wid/page/:pid/widget">Kite Surfing Vs Kiteboarding? where will the bloodshed end?</a>
-      <a class="glyphicon glyphicon-cog list-icon" aria-hidden="true" href="#/user/:uid/website/:wid/page/:pid"></a>
-    </li>
-    <li>
-      <a href="#/user/:uid/website/:wid/page/:pid/widget">Kite and Stuff</a>
-      <a class="glyphicon glyphicon-cog list-icon" aria-hidden="true" href="#/user/:uid/website/:wid/page/:pid"></a>
+    <li ng-repeat="page in model.pages">
+      <a href="#/user/{{model.userId}}/website/{{model.websiteId}}/page/{{page._id}}/widget">{{page.name}}</a>
+      <a class="glyphicon glyphicon-cog list-icon" aria-hidden="true" href="#/user/{{model.userId}}/website/{{model.websiteId}}/page/{{page._id}}"></a>
     </li>
   </ul>
 </div>
 <nav class="navbar navbar-default navbar-fixed-bottom">
-  <div class="container">
-    <a class="glyphicon glyphicon-user footer-nav-right-icon" aria-hidden="true" href="#/user/:uid/website/:wid/page"></a>
+  <div class="container-fluid">
+    <a class="glyphicon glyphicon-user footer-nav-right-icon" aria-hidden="true" href="#/user/{{model.userId}}"></a>
   </div>
 </nav>

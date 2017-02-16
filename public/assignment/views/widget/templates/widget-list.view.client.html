@@ -1,85 +1,39 @@
 
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
-    <a class="glyphicon glyphicon-menu-left nav-back-icon" aria-hidden="true" href="#/user/:uid/website/:wid/page/:pid/widget"></a>
+    <a class="glyphicon glyphicon-menu-left nav-back-icon" aria-hidden="true" href="#/user/{{model.userId}}/website/{{model.websiteId}}/page"></a>
     <h3 class="nav-header">Widgets</h3>
-    <a class="glyphicon glyphicon-plus nav-icon" aria-hidden="true" href="page-new.html"></a>
+    <a class="glyphicon glyphicon-plus nav-icon" aria-hidden="true" href="#/user/{{model.userId}}/website/{{model.websiteId}}/page/{{model.pageId}}/widget/new"></a>
   </div>
 </nav>
 <div class="container-fluid">
-  <div class=heading-widget>
+  <div ng-repeat="widget in model.widgets">
     <div class="config-toolbar">
-      <a href="#/user/:uid/website/:wid/page/:pid/widget/:wgid">
+      <a href="#/user/{{model.userId}}/website/{{model.websiteId}}/page/{{model.pageId}}/widget/{{widget._id}}">
         <span class="glyphicon glyphicon-cog"></span>
       </a>
       <span class="glyphicon glyphicon-align-justify"></span>
     </div>
-    <h2>Kite Surfing Rules</h2>
-  </div>
-  <div class=heading-widget>
-    <div class="config-toolbar">
-      <a href="#/user/:uid/website/:wid/page/:pid/widget/:wgid">
-        <span class="glyphicon glyphicon-cog"></span>
-      </a>
-      <span class="glyphicon glyphicon-align-justify"></span>
+    <div ng-switch="widget.widgetType">
+      <div ng-switch-when="HEADING">
+        <ng-include src="'views/widget/templates/display/widget-heading.view.client.html'"></ng-include>
+      </div>
+      <div ng-switch-when="IMAGE">
+        <ng-include src="'views/widget/templates/display/widget-image.view.client.html'"></ng-include>
+      </div>
+      <div ng-switch-when="YOUTUBE">
+        <ng-include src="'views/widget/templates/display/widget-youtube.view.client.html'"></ng-include>
+      </div>
+      <div ng-switch-when="HTML">
+        <ng-include src="'views/widget/templates/display/widget-html.view.client.html'"></ng-include>
+      </div>
     </div>
-    <h3>Crazy Pack of Kite Surfers Traverse the Bermuda Triangle, None Survive</h3>
-  </div>
-
-  <div class=image-widget>
-    <div class="config-toolbar">
-      <a href="#/user/:uid/website/:wid/page/:pid/widget/:wgid">
-        <span class="glyphicon glyphicon-cog"></span>
-      </a>
-      <span class="glyphicon glyphicon-align-justify"></span>
-    </div>
-    <img src="https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAQnAAAAJGM0NWM0YjNlLWUyMmQtNDNlYS05ZTUyLWFiZTY3ZmUwODZiMQ.jpg" class="img-responsive" alt="Kite Surf image">
-  </div>
-  <div class=html-widget>
-    <div class="config-toolbar">
-      <a href="#/user/:uid/website/:wid/page/:pid/widget/:wgid">
-        <span class="glyphicon glyphicon-cog"></span>
-      </a>
-      <span class="glyphicon glyphicon-align-justify"></span>
-    </div>
-    <p>On January 5th roughly 30 kite surfers set out to brave the bermuda triangle. It has been 25 days and none have returned. Experts speculate that they probably got really really tired and drown. Wow that got darker than I thought it would.</p>
-  </div>
-
-  <div class=heading-widget>
-    <div class="config-toolbar">
-      <a href="#/user/:uid/website/:wid/page/:pid/widget/:wgid">
-        <span class="glyphicon glyphicon-cog"></span>
-      </a>
-      <span class="glyphicon glyphicon-align-justify"></span>
-    </div>
-    <h3>Best Kite Surfing locations in the world</h3>
-  </div>
-
-  <div class=youtube-widget>
-    <div class="config-toolbar">
-      <a href="#/user/:uid/website/:wid/page/:pid/widget/:wgid">
-        <span class="glyphicon glyphicon-cog"></span>
-      </a>
-      <span class="glyphicon glyphicon-align-justify"></span>
-    </div>
-    <div class="video-container">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/jOSsb2GgcoU" frameborder="0" allowfullscreen></iframe>
-    </div>
-  </div>
-  <div class=html-widget>
-    <div class="config-toolbar">
-      <a href="#/user/:uid/website/:wid/page/:pid/widget/:wgid">
-        <span class="glyphicon glyphicon-cog"></span>
-      </a>
-      <span class="glyphicon glyphicon-align-justify"></span>
-    </div>
-    <p>Check out these absolutely beautiful kite surfing spots. These locations are rated for average surf conditions, temperature, and beauty.</p>
-  </div>
-  <div class="image-widget">
 
   </div>
+
+</div>
 <nav class="navbar navbar-default navbar-fixed-bottom">
   <div class="container">
-    <a class="glyphicon glyphicon-user footer-nav-right-icon" aria-hidden="true" href="#/user/:uid"></a>
+    <a class="glyphicon glyphicon-user footer-nav-right-icon" aria-hidden="true" href="#/user/{{model.userId}}"></a>
   </div>
 </nav>

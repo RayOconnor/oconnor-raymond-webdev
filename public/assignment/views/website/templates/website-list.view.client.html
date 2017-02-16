@@ -1,33 +1,21 @@
 
 <nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <a class="glyphicon glyphicon-menu-left nav-back-icon" aria-hidden="true" href="#/user/:uid"></a>
+  <div class="container-fluid">
+    <a class="glyphicon glyphicon-menu-left nav-back-icon" aria-hidden="true" href="#/user/{{}}"></a>
     <h3 class="nav-header">Websites</h3>
-    <a class="glyphicon glyphicon-plus nav-icon" aria-hidden="true" href="#/user/:uid/website/new"></a>
+    <a class="glyphicon glyphicon-plus nav-icon" aria-hidden="true" href="#/user/{{model.userId}}/website/new"></a>
   </div>
 </nav>
-<div class="container user-form">
+<div class="container-fluid user-form">
   <ul>
-    <li>
-      <a href="#/user/:uid/website/:wid/page">Address Book App</a>
-      <a class="glyphicon glyphicon-cog list-icon" aria-hidden="true" href="#/user/:uid/website/:wid"></a>
-    </li>
-    <li>
-      <a href="#/user/:uid/website/:wid/page">Blogger</a>
-      <a class="glyphicon glyphicon-cog list-icon" aria-hidden="true" href="#/user/:uid/website/:wid"></a>
-    </li>
-    <li>
-      <a href="#/user/:uid/website/:wid/page">Blogging App</a>
-      <a class="glyphicon glyphicon-cog list-icon" aria-hidden="true" href="#/user/:uid/website/:wid"></a>
-    </li>
-    <li>
-      <a href="#/user/:uid/website/:wid/page">Script Testing App</a>
-      <a class="glyphicon glyphicon-cog list-icon" aria-hidden="true" href="#/user/:uid/website/:wid"></a>
+    <li ng-repeat="website in model.websites">
+      <a href="#/user/{{model.userId}}/website/{{website._id}}/page">{{website.name}}</a>
+      <a class="glyphicon glyphicon-cog list-icon" aria-hidden="true" href="#/user/{{model.userId}}/website/{{website._id}}"></a>
     </li>
   </ul>
 </div>
 <nav class="navbar navbar-default navbar-fixed-bottom">
-  <div class="container">
-    <a class="glyphicon glyphicon-user footer-nav-right-icon" aria-hidden="true" href="#/user/:uid"></a>
+  <div class="container-fluid">
+    <a class="glyphicon glyphicon-user footer-nav-right-icon" aria-hidden="true" href="#/user/{{model.userId}}"></a>
   </div>
 </nav>

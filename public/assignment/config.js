@@ -11,9 +11,11 @@
         controllerAs: 'model'
       })
       .when("/register",{
-        templateUrl: 'views/user/templates/register.view.client.html'
+        templateUrl: 'views/user/templates/register.view.client.html',
+        controller: 'registerController',
+        controllerAs: 'model'
       })
-      .when("/profile/:uid",{
+      .when("/user/:uid",{
         templateUrl: 'views/user/templates/profile.view.client.html',
         controller: 'profileController',
         controllerAs: 'model'
@@ -34,18 +36,18 @@
         controllerAs: "model"
       })
       .when("/user/:uid/website/:wid/page",{
-        templateUrl: 'views/website/templates/page-list.view.client.html',
-        controller: "WebsiteEditController",
+        templateUrl: 'views/page/templates/page-list.view.client.html',
+        controller: "PageListController",
         controllerAs: "model"
       })
       .when("/user/:uid/website/:wid/page/new",{
-        templateUrl: 'views/website/templates/page-new.view.client.html',
-        controller: "WebsiteEditController",
+        templateUrl: 'views/page/templates/page-new.view.client.html',
+        controller: "PageNewController",
         controllerAs: "model"
       })
       .when("/user/:uid/website/:wid/page/:pid",{
-        templateUrl: 'views/website/templates/page-edit.view.client.html',
-        controller: "WebsiteEditController",
+        templateUrl: 'views/page/templates/page-edit.view.client.html',
+        controller: "PageEditController",
         controllerAs: "model"
       })
       .when("/user/:uid/website/:wid/page/:pid/widget",{
@@ -54,14 +56,19 @@
         controllerAs: "model"
       })
       .when("/user/:uid/website/:wid/page/:pid/widget/new",{
-        templateUrl: 'views/widget/templates/widget-chooser.view.client.html',
-        controller: "WidgetListController",
+        templateUrl: 'views/widget/templates/widget-choose.view.client.html',
+        controller: "WidgetNewController",
         controllerAs: "model"
       })
       .when("/user/:uid/website/:wid/page/:pid/widget/:wgid",{
         templateUrl: 'views/widget/templates/widget-edit.view.client.html'
         ,controller: "WidgetEditController",
         controllerAs: "model"
+      })
+      .otherwise({
+        templateUrl: 'views/user/templates/login.view.client.html',
+        controller: 'loginController',
+        controllerAs: 'model'
       });
 
   }

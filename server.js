@@ -16,6 +16,10 @@ app.get('/times', function(request, response) {
   response.send(result);
 });
 
+app.get('/', function(req, res){
+  res.sendfile((__dirname + '/index.html'));
+})
+
 require ("./test/app.js")(app);
 
 var port = process.env.PORT || 3000;
