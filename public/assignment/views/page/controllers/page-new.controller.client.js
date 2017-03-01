@@ -10,9 +10,15 @@
     vm.createPage = createPage;
 
     function init() {
-      vm.pages = PageService.findPagesByWebsiteId(vm.websiteId);
+      PageService
+        .findPagesByWebsiteId(vm.websiteId)
+        .success(renderPages);
     }
     init();
+
+    function renderPages(pages) {
+      vm.pages = pages;
+    }
 
     function createPage(page) {
       PageService.createPage(vm.websiteId, page);
