@@ -7,7 +7,7 @@
     </div>
   </nav>
   <div class="container-fluid">
-      <form>
+
         <div ng-switch="model.widget.widgetType">
           <div ng-switch-when="HEADING">
             <ng-include src="'views/widget/templates/edit/widget-heading-edit.view.client.html'"></ng-include>
@@ -23,7 +23,7 @@
           </div>
         </div>
         <a ng-click="model.deleteWidget()" class="form-group btn btn-default btn-danger btn-block" role="button">Delete</a>
-      </form>
+
     </div>
   </div>
 </div>

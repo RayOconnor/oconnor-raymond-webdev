@@ -9,12 +9,18 @@
     vm.createWebsite = createWebsite;
 
     function init() {
-      vm.websites = WebsiteService.findWebsitesByUser(vm.userId);
+      WebsiteService
+        .findWebsitesByUser(vm.userId)
+        .success(renderWebsites);
     }
     init();
 
-    function createWebsite (website) {
-      WebsiteService.createWebsite(vm.userId, website);
+    function renderWebsites(websites) {
+      vm.websites = websites;
+    }
+
+    function createWebsite() {
+      WebsiteService.createWebsite(vm.userId, vm.website);
       $location.url("/user/"+vm.userId+"/website");
     };
   }
