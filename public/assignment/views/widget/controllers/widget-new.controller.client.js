@@ -13,9 +13,14 @@
     function createAndEdit(widgetType) {
       var widget = {};
       widget.widgetType = widgetType;
-      widgetId = WidgetService.createWidget(vm.pageId, widget)._id;
-      $location.url("/user/"+vm.userId+"/website/"+vm.websiteId+"/page/"+vm.pageId+"/widget/"+widgetId);
+      WidgetService
+        .createWidget(vm.pageId, widget)
+        .success(function(widget) {
+          $location.url("/user/"+vm.userId+"/website/"+vm.websiteId+"/page/"+vm.pageId+"/widget/"+widget._id);
+        })
     };
+
+
 
   }
 })();

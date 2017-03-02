@@ -9,13 +9,20 @@
     vm.websiteId = $routeParams.wid;
     vm.pageId = $routeParams.pid;
     vm.widgetId = $routeParams.wgid;
+    vm.callbackUrl = "/assignment/#/user/"+vm.userId+"/website/"+vm.websiteId+"/page/"+vm.pageId+"/widget/"+vm.widgetId;
     vm.deleteWidget = deleteWidget;
     vm.updateWidget = updateWidget;
 
     function init() {
-      vm.widget = WidgetService.findWidgetById(vm.widgetId);
+      WidgetService
+        .findWidgetById(vm.widgetId)
+        .success(renderWidget);
     }
     init();
+
+    function renderWidget(widget) {
+      vm.widget = widget;
+    }
 
     function deleteWidget() {
       WidgetService.deleteWidget(vm.widgetId);

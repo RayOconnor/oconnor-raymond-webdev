@@ -40,6 +40,7 @@ module.exports = function (app) {
     for(var p in pages) {
       if(pages[p]._id === pageId) {
         res.json(pages[p]);
+        return;
       }
     }
   }
