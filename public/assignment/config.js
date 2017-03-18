@@ -65,6 +65,11 @@
         ,controller: "WidgetEditController",
         controllerAs: "model"
       })
+      .when("/user/:uid/website/:wid/page/:pid/widget/:wgid/search",{
+        templateUrl: 'views/widget/templates/widget-edit.view.client.html'
+        ,controller: "WidgetEditController",
+        controllerAs: "model"
+      })
       .otherwise({
         templateUrl: 'views/user/templates/login.view.client.html',
         controller: 'loginController',

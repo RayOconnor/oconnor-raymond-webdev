@@ -18,13 +18,13 @@ module.exports = function (app) {
     newUser = req.body;
     newUser._id = nextId.toString();
     nextId += 1;
-    users.push(newUser)
+    users.push(newUser);
     res.json(newUser)
 
   }
 
   function findUserById(req, res) {
-    var uid = req.params.userId
+    var uid = req.params.userId;
     for (var u in users) {
       if (users[u]._id === uid) {
         res.json(users[u]);
