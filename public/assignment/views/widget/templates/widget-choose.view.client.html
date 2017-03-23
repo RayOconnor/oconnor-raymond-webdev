@@ -14,10 +14,10 @@
       <a href="#/user/{{model.userId}}/website/{{model.websiteId}}/page/{{model.pageId}}/widget">Label</a>
     </li>
     <li>
-      <a href="#/user/{{model.userId}}/website/{{model.websiteId}}/page/{{model.pageId}}/widget">HTML</a>
+      <a ng-click="model.createAndEdit('HTML')">HTML</a>
     </li>
     <li>
-      <a href="#/user/{{model.userId}}/website/{{model.websiteId}}/page/{{model.pageId}}/widget">Text Input</a>
+      <a ng-click="model.createAndEdit('TEXT')">Text Input</a>
     </li>
     <li>
       <a href="#/user/{{model.userId}}/website/{{model.websiteId}}/page/{{model.pageId}}/widget">Link</a>

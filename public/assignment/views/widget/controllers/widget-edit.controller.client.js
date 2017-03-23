@@ -12,6 +12,7 @@
     vm.callbackUrl = "/assignment/#/user/"+vm.userId+"/website/"+vm.websiteId+"/page/"+vm.pageId+"/widget/"+vm.widgetId;
     vm.deleteWidget = deleteWidget;
     vm.updateWidget = updateWidget;
+    vm.searchImage = searchImage;
 
     function init() {
       WidgetService
@@ -27,12 +28,16 @@
     function deleteWidget() {
       WidgetService.deleteWidget(vm.widgetId);
       $location.url("/user/"+vm.userId+"/website/"+vm.websiteId+"/page/"+vm.pageId+"/widget");
-    };
+    }
 
     function updateWidget() {
       WidgetService.updateWidget(vm.widgetId, vm.widget);
       $location.url("/user/"+vm.userId+"/website/"+vm.websiteId+"/page/"+vm.pageId+"/widget");
-    };
+    }
+
+    function searchImage() {
+      $location.url("/user/"+vm.userId+"/website/"+vm.websiteId+"/page/"+vm.pageId+"/widget/"+vm.widgetId+"/search");
+    }
     
   }
 })();

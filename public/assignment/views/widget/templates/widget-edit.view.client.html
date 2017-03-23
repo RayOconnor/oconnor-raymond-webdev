@@ -19,7 +19,17 @@
             <ng-include src="'views/widget/templates/edit/widget-youtube-edit.view.client.html'"></ng-include>
           </div>
           <div ng-switch-when="HTML">
-            <ng-include src="'views/widget/templates/edit/widget-youtube-edit.view.client.html'"></ng-include>
+            <ng-include src="'views/widget/templates/edit/widget-html-edit.view.client.html'"></ng-include>
+          </div>
+          <div ng-switch-when="TEXT">
+            Text
+            <input ng-model="model.widget.text" class="form-control"/>
+            Rows
+            <input ng-model="model.widget.rows" class="form-control" type="number"/>
+            Placeholder
+            <input ng-model="model.widget.placeholder" class="form-control"/>
+            Formatted
+            <input ng-model="model.widget.formatted" type="checkbox"/>
           </div>
         </div>
         <a ng-click="model.deleteWidget()" class="form-group btn btn-default btn-danger btn-block" role="button">Delete</a>
