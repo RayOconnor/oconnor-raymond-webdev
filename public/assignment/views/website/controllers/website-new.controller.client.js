@@ -20,6 +20,7 @@
     }
 
     function createWebsite() {
+      vm.website['_user'] = vm.userId;
       WebsiteService.createWebsite(vm.userId, vm.website);
       $location.url("/user/"+vm.userId+"/website");
     };

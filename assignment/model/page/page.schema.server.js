@@ -1,3 +1,14 @@
-/**
- * Created by roconnorc on 3/22/17.
- */
+module.exports = function () {
+  var mongoose = require('mongoose');
+
+  var PageSchema = mongoose.Schema({
+    _website: {type: mongoose.Schema.Types.ObjectId, ref: 'websiteModel'},
+    name: String,
+    title: String,
+    description: String,
+    widgets: [{type: mongoose.Schema.Types.ObjectId, ref: 'widgetModel'}],
+    dateCreated: {type: Date}
+  }, {collection: 'page'});
+
+  return PageSchema;
+};
