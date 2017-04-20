@@ -1,0 +1,92 @@
+h3 {
+	color: dimgrey;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: ghostwhite;
+}
+
+h4.card-sub-header {
+	margin-top:31px;
+}
+
+img.profile-img {
+	max-width: 300px;
+	margin: 15px 0;
+}
+
+img.card-img {
+	margin-left: 15px;
+	max-width: 180px
+}
+
+img.home-card-img {
+	max-width: 300px
+}
+
+p { 
+  text-indent: 30px;
+  font-weight: 500;
+}
+
+p.site-summary {
+	margin-top: 10px;
+}
+
+p.card-description {
+	padding: 0 30px;
+	text-indent: 0px;
+}
+
+div.card {
+	border-style: solid;
+  border-width: 1px 0 0;
+  border-color: darkgrey;
+  padding-bottom: 2vw;
+}
+
+div.page-container {
+	background: ghostwhite;
+	border-radius: 5px;
+	margin-bottom: 20px
+}
+
+nav.navbar-default {
+	background-color: #6C648B;
+	border-radius: 0px;
+  width: 100%;
+  border-width: 0px;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: ghostwhite;
+} 
+
+.navbar-default .navbar-brand {
+	color: ghostwhite;
+}
+
+body {
+	background-color:#83d3de ;
+}
+
+blockquote.instagram-media {
+	max-width: 300px;
+}
+
+div.project-card {
+
+}
+
+i.big-icon {
+	font-size: 200px;
+	width: 100%;
+	text-align: center;
+}
+
+.project-title {
+	width: 100%;
+	text-align: center;
+}
+
+
