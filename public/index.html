@@ -1,30 +1,71 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Web Dev Course Home Page</title>
-  </head>
-  <body>
-    <h1>Web Dev Course Home Page</h1>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+          integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+          crossorigin="anonymous"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.css">
+  <link href="css/style.css" rel="stylesheet"/>
 
-    <p>
-      Customize this home page to your linking.
-    </p>
-
-    <h2>Required links</h2>
-    <ul>
-      <li>
-        <a href="project/index.html">Project</a>
-      </li>
-      <li>
-        <a href="assignment/index.html">Assignment</a>
-      </li>
-      <li>
-        <a href="test/index.html">Test MongoDB</a>
-      </li>
-      <li>
-        <a href="https://github.com/RayOconnor/oconnor-raymond-webdev">Ray O'Connor's public repository at GitHub.com </a>
-      </li>
-    </ul>
-  </body>
+</head>
+<body>
+<div class="container-fluid col-xs-12 col-sm-10 col-md-8 col-md-offset-2 col-sm-offset-1 page-container">
+  <div class="header-card">
+    <div class="row">
+      <img class="col-xs-12 col-sm-4 img-rounded img-responsive profile-img" src="/img/squareRayProfile.png" alt="profile">
+      <div class="col-sm-8">
+        <h1>Raymond O'Connor</h1>
+        <h3 class="indented-subheader">Software Engineer & Mentor</h3>
+        <a class="btn btn-social-icon btn-github" onClick="parent.open('http://github.com/RayOconnor')">
+          <span class="fa fa-github"></span>
+        </a>
+        <a class="btn btn-social-icon btn-linkedin" onClick="parent.open('https://www.linkedin.com/in/rayoconnor52')">
+          <span class="fa fa-linkedin"></span>
+        </a>
+        <a class="btn btn-social-icon btn-instagram" onClick="parent.open('https://www.instagram.com/raymond_oconnor')">
+          <span class="fa fa-instagram"></span>
+        </a>
+        <a class="btn btn-social-icon btn-twitter" onClick="parent.open('https://twitter.com/ray_oconnor52')">
+          <span class="fa fa-twitter"></span>
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <p class= "col-xs-12 site-summary" align="justify">My name is Raymond O'Connor and I will graduate with a BS in Computer Science and Business from Northeastern University in May 2017. In August I will begin work as a software engineer for Wayfair in Boston adding to my 21 months of full-time engineering experience. I encourage those who are interested to look at the details of my three past co-ops on my LinkedIn linked above. Another great passion of mine is Mentorship. I have held a formal mentorship role as a Fellow of the School of Computer and Information Science and as a tutor. Mentorship is challenging, but incredibly rewarding. In my free time I enjoy running, vocal and guitar performance, and traveling. I also recently learned to kitesurf and would love to talk about it. </p>
+    </div>
+  </div>
+  <div class="card">
+    <div class="col-xs-12 card-header row">
+      <h2 class="card-header">Web Development</h2>
+      <p>I am currently enrolled in CS5610 at Northeastern University. The details of the course can be found <a href="http://portal-cs5610online.rhcloud.com/#/">here</a></p>
+    </div>
+    <div class="row">
+      <div class="col-md-4 project-card">
+        <a href="/">
+          <i class="fa fa-calendar-check-o big-icon"></i>
+          <h3 class=project-title>BetterMe</h3>
+        </a>
+      </div>
+      <div class="col-md-4 project-card">
+        <a href="/">
+          <i class="fa fa-paperclip big-icon"></i>
+          <h3 class=project-title>Assignments</h3>
+        </a>
+      </div>
+      <div class="col-md-4 project-card">
+        <a href="/">
+          <i class="fa fa-play-circle-o big-icon"></i>
+          <h3 class=project-title>My Dad Is Awesome The Video Game</h3>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
 </html>
